@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday, Rhoda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;600&family=Dancing+Script:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Music: put your file at assets/music/birthday-song.mp3 -->
+    <audio id="music" loop preload="auto">
+      <source
+        src="assets/music/atlasaudio-birthday-606219.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <div id="balloons" class="balloons" aria-hidden="true"></div>
+    <button
+      id="musicBtn"
+      class="music-btn"
+      aria-label="Play or pause music"
+      hidden
+    >
+      ♪ Music on
+    </button>
+
+    <!-- 1. WELCOME SCREEN -->
+    <section id="welcome" class="welcome">
+      <p class="small">&#10084; Something special was made for you &#10084;</p>
+      <h1>Rhoda</h1>
+      <button id="openBtn" class="btn">Open your surprise</button>
+    </section>
+
+    <main id="site" class="site" hidden>
+      <!-- 2. HERO -->
+      <header class="hero">
+        <h2>Happy Birthday, <span class="script">Rhoda</span></h2>
+        <p>
+          Today is all about you. Scroll slowly and take your time &#127880;
+        </p>
+      </header>
+
+      <!-- 3. PHOTO GALLERY -->
+      <section class="gallery" aria-label="Photo memories">
+        <h3>Moments worth keeping</h3>
+        <div class="photos">
+          <!-- Photos go in assets/photos/ — edit each caption below -->
+          <figure class="photo tilt-l">
+            <img
+              src="assets/photos/photo1.jpeg"
+              alt="Memory 1"
+              data-name="photo1.jpg"
+            />
+            <figcaption>Caption for photo 1</figcaption>
+          </figure>
+          <figure class="photo tilt-r">
+            <img
+              src="assets/photos/photo2.jpeg"
+              alt="Memory 2"
+              data-name="photo2.jpg"
+            />
+            <figcaption>Caption for photo 2</figcaption>
+          </figure>
+          <figure class="photo tilt-r">
+            <img
+              src="assets/photos/photo3.jpeg"
+              alt="Memory 3"
+              data-name="photo3.jpg"
+            />
+            <figcaption>Caption for photo 3</figcaption>
+          </figure>
+          <figure class="photo tilt-l">
+            <img
+              src="assets/photos/photo1.jpeg"
+              alt="Memory 4"
+              data-name="photo4.jpg"
+            />
+            <figcaption>Caption for photo 4</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 4. LETTER -->
+      <section class="letter-wrap">
+        <article class="letter">
+          <h3>Dear Rhoda,</h3>
+          <p>
+            Happy birthday. I wanted to give you something that wasn't a card
+            you'd read once and put away, so I made you a little corner of the
+            internet that is only yours.
+          </p>
+          <p>
+            You are kind, steady, and brave in ways you don't always notice.
+            People feel better when you are in the room, and I am one of them.
+          </p>
+          <!-- EDIT: add one or two real details only you know -->
+          <p>
+            [Add a real memory here: a moment she made you laugh, something you
+            admire, a time she showed strength.]
+          </p>
+          <p>
+            I hope this year brings you rest where you need it, joy where you've
+            earned it, and every dream you've been quietly working on.
+          </p>
+          <p class="sign">With love and gratitude,<br />Susan</p>
+        </article>
+      </section>
+
+      <!-- EXTRAS: compliments, coupons, certificate -->
+      <section class="extras">
+        <h3>A few things to make you smile</h3>
+
+        <div class="jar">
+          <p class="jar-text" id="jarText">
+            Tap the button for a little reminder of how wonderful you are.
+          </p>
+          <button id="jarBtn" class="btn">
+            Tap for a compliment &#128150;
+          </button>
+        </div>
+
+        <h4 class="sub">Birthday coupons <span>(tap to redeem)</span></h4>
+        <div class="coupons">
+          <!-- EDIT these three treats to whatever you can really give her -->
+          <button class="coupon">
+            <b>One coffee or tea</b><small>on me, any day you choose</small
+            ><em>Redeemed &#10084;</em>
+          </button>
+          <button class="coupon">
+            <b>One lunch together</b><small>your favourite place</small
+            ><em>Redeemed &#10084;</em>
+          </button>
+          <button class="coupon">
+            <b>One favourite snack</b><small>delivered with a smile</small
+            ><em>Redeemed &#10084;</em>
+          </button>
+        </div>
+
+        <div class="cert">
+          <div class="seal">&#9733;</div>
+          <p class="cert-small">Official Certificate</p>
+          <h4>Rhoda</h4>
+          <p>is hereby awarded the title of</p>
+          <p class="cert-title">Most Wonderful Person of the Year</p>
+          <p class="cert-small">Valid today, tomorrow, and every day after</p>
+        </div>
+      </section>
+
+      <!-- 5. CAKE -->
+      <section class="cake-section">
+        <h3>One last thing</h3>
+        <p id="cakeHint">Tap the candles, close your eyes, and make a wish.</p>
+
+        <div class="cake" id="cake">
+          <div class="candles">
+            <button class="candle" aria-label="Blow out candle 1">
+              <span class="flame"></span>
+            </button>
+            <button class="candle" aria-label="Blow out candle 2">
+              <span class="flame"></span>
+            </button>
+            <button class="candle" aria-label="Blow out candle 3">
+              <span class="flame"></span>
+            </button>
+          </div>
+          <div class="tier top"></div>
+          <div class="tier bottom"></div>
+          <div class="plate"></div>
+        </div>
+
+        <div id="finale" class="finale" hidden>
+          <h2>Your wish is on its way.</h2>
+          <p>Happy birthday, Rhoda.</p>
+          <button id="againBtn" class="btn ghost">
+            Light the candles again
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <canvas id="confetti" aria-hidden="true"></canvas>
+    <script src="js/balloons.js"></script>
+    <script src="js/hearts.js"></script>
+    <script src="js/extras.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
